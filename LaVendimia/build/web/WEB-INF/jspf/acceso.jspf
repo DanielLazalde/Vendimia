@@ -1,0 +1,10 @@
+<%
+    try {
+        String varUsuNombre = session.getAttribute("session_usu_nombre").toString();
+        if (varUsuNombre == null) {
+            response.sendRedirect("/LaVendimia/");
+        }
+    } catch (Exception e) {
+        response.sendRedirect("/LaVendimia/");
+    }
+%>

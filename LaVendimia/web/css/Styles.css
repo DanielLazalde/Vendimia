@@ -1,0 +1,926 @@
+@CHARSET "ISO-8859-1";
+
+/*Borde de la Tabla de frmloguin*/
+.Borde{
+	border-top: 3px solid #0b1191;
+	border-left: 3px solid #0b1191;
+	border-right: 3px solid #0b1191;
+	border-bottom: 3px solid #0b1191;
+}
+/*borde de la frmValidaUsuario*/
+.Borde2{
+	border-top: 3px solid #C0C0C0;
+	border-left: 3px solid #C0C0C0;
+	border-right: 3px solid #C0C0C0;
+	border-bottom: 3px solid #C0C0C0;
+}
+.Barra{
+	border-top: 3px solid #efe62d;
+	border-left: 3px solid #efe62d;
+	border-right: 3px solid #efe62d;
+	border-bottom: 3px solid #efe62d;
+	background-color:#003399;
+	color:#efe62d;
+	font-family:verdana;
+	font-size:11px;
+	font-weight:bold;
+	
+}
+
+.BarraSel{	
+	background-color:#003399;
+	color:#efe62d;
+	font-family:verdana;
+	font-size:11px;
+	font-weight:bold;	
+}
+
+.LinkAmSel{
+	text-align: left; 
+	color:#efe62d;	
+}
+
+.BarraLink{	
+
+	border-left: 3px solid #3a61b0;
+	border-right: 3px solid #3a61b0;
+	border-bottom: 3px solid #3a61b0;
+	background-color:#003399;
+	color:#efe62d;
+	font-family:verdana;
+	font-size:11px;
+	font-weight:bold;	
+	
+}
+.BordePunteado{
+	border-top: 1px dashed #efe62d;
+	border-left: 1px dashed #efe62d;
+	border-right: 1px dashed #efe62d;
+	border-bottom: 1px dashed #efe62d;
+}
+.BordeSolido{
+	border-top: 1px solid #efe62d;
+	border-left: 1px solid #efe62d;
+	border-right: 1px solid #efe62d;
+	border-bottom: 1px solid #efe62d;
+
+}
+.Consulta{
+	border-top: 1px solid #003399;
+	border-left: 1px solid #003399;
+	border-right: 1px solid #003399;
+	border-bottom: 1px solid #003399;
+}
+.ConsultaFont{
+color: #1d13e0;
+	font-family:arial,verdana,times new roman;
+	font-size:12px;
+	font-weight:bold;
+}
+.ConsultaFontReport{
+    color: #e4e4e4;;
+	font-family:arial,verdana,times new roman;
+	font-size:12px;	
+	text-align: left;    
+	border-collapse: collapse;
+	border:1px solid silver; 
+}
+.ConsultaFontReportTrEnc{
+    color:navy;
+    background-color:#e4e4e4;
+    text-align: center;
+    font-size:12px;  
+    font-color:navy;  
+}
+
+.ConsultaFontReportTr{
+    color:black;
+    background-color:#white;
+    border:0px solid silver; 
+    text-align: left;
+    font-size:9px;  
+}
+
+
+
+.ConsultaFont2{
+	color: #1d13e0;
+	font-family:arial,verdana,times new roman;
+	font-size:10px;
+	font-weight:bold;
+}
+.ConsultaFont3{
+	color: #1d13e0;
+	font-family:arial,verdana,times new roman;
+	font-size:10px;
+	font-weight:bold;
+	TEXT-TRANSFORM:uppercase;
+}
+.ConsultaFontX{
+	color: #1d13e0;
+	font-family:arial,verdana,times new roman;
+	font-size:10px;
+	font-weight:bold;
+	border-top: 0px solid;
+	border-left: 0px solid;
+	border-right: 0px solid;
+	border-bottom: 0px solid;
+}
+.ConsultaFontX2{
+	color: #1d13e0;
+	font-family:arial,verdana,times new roman;
+	font-size:10px;
+	font-weight:bold;
+	border-top: 0px solid;
+	border-left: 0px solid;
+	border-right: 0px solid;
+	border-bottom: 0px solid;
+	background-color: #c0c0c0;
+}
+.ConsultaCredFont{
+color: #000000;
+	font-family:arial,verdana,times new roman;
+	font-size:11px;
+
+}
+.ConsultaFontToken
+{
+	font-family:arial,verdana,times new roman;
+	font-size:12px;
+	font-weight:bold;
+	color: #004e9b
+}
+.LinkAm{
+	color:#efe62d;
+	text-decoration:underline;
+}
+
+.bordeCelda {
+	border-left: 1px solid #C0C0C0;
+	border-right: 1px solid #C0C0C0;
+	color: #1d13e0;
+	font-family:arial,verdana,times new roman;
+	font-size:10px;
+	font-weight:bold;
+}
+.fontComentarios{
+	font-family:arial,verdana,times new roman;
+	font-size:10px;
+	font-weight:bold;
+	color: #1d13e0;
+	border-top: 1px solid;
+	border-left: 1px solid;
+	border-right: 1px solid;
+	border-bottom: 1px solid;
+}
+
+/*Estilos de frmClienteLat.jsp*/
+.BordeAzul0{
+	color:#000096;
+	border-top: 1px solid #000096;
+	border-left: 1px solid #000096;
+	border-right: 1px solid #000096;
+	border-bottom: 1px solid #000096;
+	font-family:verdana;
+	font-size:9px;
+}
+.BordeAzul2{
+	color:#000096;
+	border-right: 1px solid #000096;
+	border-bottom: 1px solid #000096;
+	font-family:verdana;
+	font-size:9px;
+	
+}
+.BordeAzul1{
+	color:#000096;
+	border-top: 1px solid #000096;	
+	border-right: 1px solid #000096;
+	border-bottom: 1px solid #000096;
+	font-family:verdana;
+	font-size:9px;
+}
+.BordeAzul3{
+	color:#000096;
+	border-right: 1px solid #000096;
+	border-left: 1px solid #000096;
+	border-bottom: 1px solid #000096;
+	font-family:verdana;
+	font-size:9px;
+}
+.BordeAzul4{
+	border-right: 1px solid #000096;
+	border-left: 1px solid #000096;
+	border-bottom: 1px solid #000096;
+	border-top: 1px solid #000096;
+}
+.CuadroAzul{
+	background-color:#003399;
+	color:#efe62d;
+	font-family:times new roman;
+	font-size:16px;
+	font-weight:bold;
+}
+/*------------------------------------*/
+
+/*Estilos para la sub-barra 1  de la ventana principal*/
+.subBarra1{
+	color:#bc9800;
+	font-family:verdana;
+	background-color:#003399;
+	font-size:11px;
+	font-weight:bold;
+	border-top: 1px solid #3c63b1;
+	border-left: 1px solid #3c63b1;
+	border-right: 1px solid #3c63b1;
+	border-bottom: 1px solid #3c63b1;
+}
+
+.subBarra2{
+	color:#efe62d;
+	font-family:verdana;
+	background-color:#003399;
+	font-size:11px;
+	font-weight:bold;
+	border-top: 1px solid #3c63b1;
+	border-left: 1px solid #3c63b1;
+	border-right: 1px solid #3c63b1;
+	border-bottom: 1px solid #3c63b1;
+}
+/*-----------------------------------------------------*/
+
+/*Estilos de frmLatPrincipal.jsp*/
+.EtiquetaSuperior{
+	color:#efe62d;
+	background-color:#1a3b7f;
+	font-color:#002570;
+	font-family:verdana;
+	font-size:11px;
+	font-weight:bold;
+}
+
+.EtiquetaInferior{
+	background-color:#cccccc;
+	border-top:1px solid #002570;
+	border-right:1px solid #002570;
+	border-bottom:1px solid #002570;
+	border-left:1px solid #002570;
+}
+
+.htmltexto{
+	text-align: right; 
+}
+
+
+/*Estilo para hacer los 'div modales'*/
+.DivTransparente{
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#000;
+	display:none;
+	z-index:1001;opacity:.05;
+	-moz-opacity:0.05;
+	filter:alpha(opacity=5);
+}
+.DivTransparente2{
+	display:none;
+	background-color:#000;
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:1800px;
+	height:855px;
+        z-index:1001;opacity:.05;
+        -moz-opacity:0.05;
+        filter:alpha(opacity=5);
+}
+
+.DivTransparente3{
+	background-color:#000;
+	position:absolute;
+	top:0px;
+	right:0px;
+	width:1800px;
+	height:855px;
+        z-index:1001;opacity:.05;
+        -moz-opacity:0.05;
+        filter:alpha(opacity=5);
+}
+
+.DivTransparente4{
+        background-color:#000;
+	position: absolute;
+        top: 0px;
+        left: 0px;
+        height:100%;
+        width:100%;        /* hacemos que ocupe toda la pantalla a cualquier resolución*/
+        z-index: 50;        /* lo colocamos por encima del resto de componentes*/
+        -moz-opacity:0.05;
+        filter:alpha(opacity=5);
+}
+
+/*estilo de la ventana modal divMensaje*/
+.DivModal1{
+	display:none;
+	color:red; 
+	background-color: #e1edff; 
+	position: absolute; 
+	font-family:verdana;
+	font-size:10px;
+	font-weight:bold;
+	left: 700px; 
+	top: 275px; 
+	width: 260px; 
+	height: 100px;
+	border: 3px solid #C0C0C0; 
+	z-index:1002;
+	overflow:auto;		
+}
+.DivModalpass{
+	display:none;
+	color:red; 
+	background-color: #e1edff; 
+	position: absolute; 
+	font-family:verdana;
+	font-size:10px;
+	font-weight:bold;
+	left: 540px; 
+	top: 230px; 
+	width: 260px; 
+	height: 100px;
+	border: 3px solid #C0C0C0; 
+	z-index:1002;
+	overflow:auto;		
+}
+.DivModal2{
+	display:none;
+	color:red; 
+	background-color: #fff; 
+	position: absolute; 
+	font-family:verdana;
+	font-size:10px;
+	font-weight:bold;
+	left: 550px; 
+	top: 275px; 
+	width: 3000px; 
+	height: 120px;
+	border: 3px solid #C0C0C0; 
+	z-index:1002;
+	overflow:auto;		
+}
+.DivMsgCom{
+	display:none;
+	color:red; 
+	background-color: #e1edff; 
+	position: absolute; 
+	font-family:verdana;
+	font-size:10px;
+	font-weight:bold;
+	left: 700px;  
+	top: 275px; 
+	width: 285px; 
+	height: 100px;
+	border: 3px solid #C0C0C0; 
+	z-index:1002;
+	overflow:auto;	
+	text-align:center;	
+}
+.DivModa151{
+	visibility: hidden;
+	color:red; 
+	background-color: #e1edff; 
+	font-family:verdana,times new roman;
+	font-size:10px;
+	font-weight:bold;
+	position: absolute; 
+	left: 700px;  
+	top: 275px; 
+	width: 260px; 
+	height: 100px;
+	border: 3px solid #C0C0C0; 
+	z-index:1002;
+	overflow:auto;		
+}
+.divMsgFolios{
+	color:red; 
+	background-color: #e1edff; 
+	font-family:verdana;
+	font-size:12px;
+	font-weight:bold;
+	position: absolute; 
+	left: 630px; 
+	top: 500px; 
+	width: 280px; 
+	height: 110px;
+	border: 3px solid #C0C0C0; 
+}
+
+/*estilo de la ventana modal divMsjContador*/
+.DivModalContador{
+	display:none;
+	color:red; 
+	background-color: #e1edff; 
+	font-family:verdana;
+	font-size:10px;
+	font-weight:bold;
+	position: absolute; 
+	left: 700px;  
+	top: 275px; 
+	width: 285px; 
+	height: 100px; 
+	border: 3px solid #C0C0C0;
+	z-index:1002;
+	overflow:auto;	
+}
+
+.DivModal2{
+	display:none;
+	color:red; 
+	background-color: #fff; 
+	position: absolute; 
+	left: 500px; 
+	top: 360px; 
+	width: 250px; 
+	height: 90px; 
+	border: 3px solid #C0C0C0;
+	z-index:1002;
+	overflow:auto;		
+}
+/*estilo de la ventana modal divStatus*/
+.DivModal3{
+	display:none;
+	color:red; 
+	background-color: white; 
+	position: absolute;
+	font-family:verdana,times new roman;
+	font-size:10px;
+	font-weight:bold; 
+	left: 500px; 
+	top: 260px; 
+	width: 220px; 
+	height: 95px;
+	border: 3px solid #C0C0C0; 
+	z-index:1002;
+	overflow:auto;		
+}
+/*estilo de la ventana modal divMensaje*/
+.DivModal4{
+	display:none;
+	color:red; 
+	font-family:verdana,times new roman;
+	font-size:10px;
+	font-weight:bold;
+	background-color: #fff; 
+	position: absolute; 
+	left: 540px; 
+	top: 230px; 
+	width: 250px; 
+	height: 100px;
+	border: 3px solid #C0C0C0; 
+	z-index:1002;
+	overflow:auto;		
+}
+/*estilo de la ventana modal divPass3*/
+.DivModal5{
+	display:none;
+	background-color: #e1edff; 
+	position: absolute; 
+	left: 520px; 
+	top: 230px; 
+	width: 325px; 
+	height: 225px;
+	border: 3px solid #C0C0C0; 
+	z-index:1002;
+	overflow:auto;		
+}
+/*estilo para las restricciones del contrase�a*/
+.passRed1{
+	color:red;
+	font-family:verdana;
+	font-size:10px;
+	font-weight:bold;
+}
+.passText1{
+	font-family:times new roman;
+	font-size:14px;
+}
+/*estilo de la ventana modal divConfCtaBPI*/
+.DivModal6{
+	display:none;
+	color:red;
+	background-color: white;
+	position: absolute;
+	left: 700px; 
+	top: 275px; 
+	width: 250px; 
+	height: 120px; 
+	border: 3px solid #C0C0C0;
+	z-index:1002;
+	overflow:auto;	
+}
+.tiempo{
+	color: #1d13e0;
+	font-family:arial,verdana,times new roman;
+	font-size:20px;
+	font-weight:bold;
+
+}
+
+/*Estilo para el grid de la consulta de varios clientes*/
+.Borde3{
+	border-top: 2px solid #000; 
+	border-left: 2px solid #000; 
+	 
+	border-bottom: 2px solid #000;
+	text-align:center;
+}
+.Borde4{
+	border-left: 2px solid #000; 
+	border-bottom: 2px solid #000;
+}
+.Borde5{
+	border-left: 2px solid #000; 
+	border-right: 2px solid #000; 
+	border-bottom: 2px solid #000;
+
+}
+.Borde6{
+	border-top: 2px solid #000;
+	border-left: 2px solid #000; 
+	border-right: 2px solid #000; 
+	border-bottom: 2px solid #000;
+	text-align:center;
+}
+.Borde7{
+	border-top: 2px solid #000; 
+	border-left: 2px solid #000; 
+	border-bottom: 2px solid #000;
+}
+
+/**Estilo para el Div de mensaje modal*/
+.DivMensaje1{
+position:absolute;
+display:none;
+left:700px;
+top:275px;
+width: 285px;
+height: 113px;
+z-index: 1002;
+}
+.DivMensaje2{
+position:absolute;
+display:block;
+left:400px;
+top:275px;
+width: 285px;
+height: 113px;
+z-index: 1002;
+}
+.DivMensaje3{
+position:absolute;
+display:none;
+left:500px;
+top:200px;
+width: 285px;
+height: 113px;
+z-index: 1002;
+background-color: #e1edff;
+border-top: 2px solid gray; 
+border-left: 2px solid gray; 
+border-bottom: 2px solid gray;
+border-right: 2px solid gray; 
+}
+
+/**Estilo para el IFrame de mensaje modal*/
+.FrameMensaje1{
+position:relative;
+z-index: 1001;
+width: 285px;
+height: 113px;
+}
+
+/**Estilo para la tabla del mensaje modal*/
+.TablaMensaje1{
+
+color:blue; 
+font-family:verdana;
+font-size:10px;
+font-weight:bold;
+z-index: 1002;
+
+}
+
+.TablaMensajeGeneralLv{
+
+color:blue; 
+font-family:verdana;
+font-size:10px;
+font-weight:bold;
+z-index: 1002;
+
+}
+.TablaMensajeErrorVal{
+position:absolute;
+left:0px;
+top:0px;
+width: 285px;
+height: 113px;
+color:blue; 
+background-color: #C0C0C0; 
+font-family:verdana;
+font-size:20px;
+font-weight:bold;
+z-index: 1002;
+}
+.TablaMensajeInteract{
+position:absolute;
+left:0px;
+top:0px;
+width: 450px;
+height: 113px;
+color:red; 
+background-color: #e1edff; 
+font-family:verdana;
+font-size:10px;
+font-weight:bold;
+z-index: 1002;
+}
+.TablaMensajeBCToken{
+position:absolute;
+left:0px;
+top:0px;
+width: 485px;
+height: 213px;
+color:red; 
+background-color: #e1edff; 
+font-family:verdana;
+font-size:10px;
+font-weight:bold;
+z-index: 1002;
+}
+.TablaMensajeToken{
+position:absolute;
+left:0px;
+top:0px;
+width: 285px;
+height: 113px;
+color:red; 
+background-color: white;
+font-family:verdana;
+font-size:10px;
+font-weight:bold;
+z-index: 1002;
+}
+
+.textToken
+{
+	width: 180px;
+	border-style: solid;
+	border-color: #2a00e1;
+	vertical-align: middle;
+	color: #2a00e1;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px;
+	border-width: 2px;
+	
+	
+}
+.textSolicitud
+{
+	width: 90px;
+	border-style: solid;
+	border-color: #2a00e1;
+	vertical-align: middle;
+	color: #2a00e1;
+	font-weight: bold;
+	text-align: center;
+	padding: 5px;
+	border-width: 2px;
+}
+
+/*CLASE PARA EL TOOLTIP*/
+a:hover {
+	background:#ffffff; 
+	text-decoration:none;
+}
+
+a.tooltip span {
+	display:none;
+	margin-left:8px;
+	width:150px;
+	padding-top: 5px;
+	padding-right: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+	cursor:pointer;
+}
+a.tooltip:hover span{
+display:inline;
+position:absolute;
+border:1px solid #cccccc;
+background:#ffffff;
+color:#6c6c6c;
+cursor:pointer;
+}
+.DivMensajeReportesToken{
+position:absolute;
+display:none;
+left:620px;
+top:310px;
+width: 285px;
+height: 150px;
+z-index: 1002;
+background-color: #e1edff;
+border-top: 2px solid gray; 
+border-left: 2px solid gray; 
+border-bottom: 2px solid gray;
+border-right: 2px solid gray;  
+}
+/*Seccion de bitacora de incidencias clientes*/
+.txt{
+height: 20px;
+width:125px;
+border: solid 1px #646464;
+font-size: 12px;
+font-family: Arial;
+color: #646464;
+}
+.bitacoraFont{
+color: #1d13e0;
+	font-family:arial,verdana,times new roman;
+	font-size:10px;
+	font-weight:bold;
+}
+.selectBit{
+width: 310px;
+height: 20px;
+}
+/*bitacora form cliente*/
+.bitacoraFontCliente{
+color: #1d13e0;
+	font-family:arial,verdana,times new roman;
+	font-size:9px;
+	font-weight:bold;
+}
+.txtCliente{
+height: 15px;
+width:80px;
+border: solid 1px #646464;
+font-size: 10px;
+font-family: Arial;
+color: #646464;
+}
+.selectBitCliente{
+width: 203px;
+height:20px;
+line-height:10px;
+padding:2px;
+}
+.btnNotas{
+	background-color:#1a3b7f;
+	color:#efe62d;
+	font-weight: bold;
+	font-size: 11px;
+	font-family:arial,verdana,times new roman;
+	border:1px solid #1a3b7f;
+	padding:3px 5px;
+}
+.seccionBtnNotas{
+	width:6%;
+	right:0;
+	margin-left:72%;
+}
+.secCuentasOp{
+	margin-top: 20px;
+}
+/**************************/
+.buttonBit {
+	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9));
+	background:-moz-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-webkit-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-o-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:-ms-linear-gradient(top, #f9f9f9 5%, #e9e9e9 100%);
+	background:linear-gradient(to bottom, #f9f9f9 5%, #e9e9e9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9',GradientType=0);
+	background-color:#f9f9f9;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#666666;
+	font-family:arial;
+	font-size:13px;
+	font-weight:bold;
+	/*padding:3px 7px;*/
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ffffff;
+}
+.buttonBit:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #e9e9e9), color-stop(1, #f9f9f9));
+	background:-moz-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-webkit-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-o-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:-ms-linear-gradient(top, #e9e9e9 5%, #f9f9f9 100%);
+	background:linear-gradient(to bottom, #e9e9e9 5%, #f9f9f9 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9e9e9', endColorstr='#f9f9f9',GradientType=0);
+	background-color:#e9e9e9;
+}
+.buttonBit:active {
+	position:relative;
+	top:1px;
+}
+
+.grid-operaciones {
+	font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+	font-size: 11px;
+	border: 1px solid #c5dbec;
+	background: #dfeffc url(images/ui-bg_glass_85_dfeffc_1x400.png) 50% 50% repeat-x;
+	font-weight: bold;
+	color: #2e6e9e;
+}
+.flotante{
+/*background-color: rgb(243, 243, 243);*/
+background: #fcfdfd url(images/ui-bg_inset-hard_100_fcfdfd_1x100.png); 
+z-index: 1007;
+margin-left: 230px;
+margin-right: 260px;
+height: 125px;
+width: 370px;
+margin-top: 380px;
+position: fixed;
+top: 0;
+border: 1px solid #a6c9e2;
+display:none;
+box-shadow: 2px 2px 5px #999;
+font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+}
+.flotante .content-flotante{
+	padding:5px;
+	font-weight: normal; 
+	color: #2e6e9e;
+}
+.flotante .content_busqueda_actions{
+	margin-left: 200px
+}
+.table_bajaAct{
+	margin-top: 80px;
+}
+.flotante_alert{
+	background: #fcfdfd url(images/ui-bg_inset-hard_100_fcfdfd_1x100.png); 
+	z-index: 1007;
+	margin-left: 230px;
+	margin-right: 280px;
+	/*height: 108px;*/
+	width: 370px;
+	margin-top: 380px;
+	position: fixed;
+	top: 0;
+	border: 1px solid #a6c9e2;
+	display:none;
+	box-shadow: 2px 2px 5px #999;
+	font-family: Lucida Grande, Lucida Sans, Arial, sans-serif;
+	clear: both; 
+	overflow: hidden; 
+	height: auto;
+}
+.flotante_alert .content_flotante_alert{
+	padding:5px;
+	font-weight: normal; 
+	color: #2e6e9e;
+}
+.flotante_alert .content_alert_actions{
+	margin-top: 5%;
+}
+.capaFondo {
+background-image: url(images/trans02.gif);
+z-index: 2;
+position: absolute;
+padding-bottom: 0px;
+padding-left: 0px;
+width: 100%;
+bottom: 0px;
+padding-right: 0px;
+background-repeat: repeat;
+height: 100%;
+top: 0px;
+right: 0px;
+padding-top: 0px;
+left: 0px
+}
+
+#navegador li {           
+           list-style-type: none; position: relative; }
+           
+#subseccion1 { position: absolute; top: 100%; left: 0px;  
+             background-color: #41338b; font:normal 0.8em arial;  
+             padding: 0.2em 0.5em ; display: none; }				 
+
+             
+ul {margin:0px 0px 0px 9px; padding:0px 0px 0px 9px;}

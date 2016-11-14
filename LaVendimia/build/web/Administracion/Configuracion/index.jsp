@@ -147,7 +147,7 @@
                                width: 80%;
                                text-decoration: none;
                                text-rendering: optimizelegibility;" >
-                                Configuracion general 
+                                Configuración general 
                             </a>
              </div>
              </div>

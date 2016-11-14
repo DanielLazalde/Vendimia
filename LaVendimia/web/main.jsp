@@ -344,13 +344,13 @@
                             </a>
                             <div style="float: right; padding: 10px 5px;" >
 
-                                <a href = "srvIniciarSesion?parAccion=cerrar_sesion"  
+                                <%--<a href = "srvIniciarSesion?parAccion=cerrar_sesion"  
                                    style="text-decoration: none;font-size: 11.9px;
 
                                    font-weight: bold;
                                    text-rendering: optimizelegibility;" >
                                     <font color="#f0f9ff">Cerrar Sesión</font>
-                                </a> 
+                                </a> --%>
                                 <font color="#EAF88D">|</font>
                                 <%--<a  onclick="desplegarMenu();"
                                     target="container" href = "Maestros/Usuarios/cambiarPassword.jsp"

@@ -46,7 +46,7 @@ public class clsArticulos {
                     + "ART.des_modelo,"
                     + "ART.num_precio,"
                     + "ART.num_existencia "
-                    + " FROM " + varNombreEsquema + ".tbl_articulos ART WHERE art.opc_estatus = true "
+                    + " FROM " + varNombreEsquema + ".tbl_articulos ART WHERE ART.opc_estatus = true "
                     + " ORDER BY ART.idu_articulo "
                     + ";";
 

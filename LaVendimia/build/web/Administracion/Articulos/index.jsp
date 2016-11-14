@@ -39,7 +39,7 @@
                 margin: 5px;
                 width: 98%;
             }
-            #dialogEditarDiaRuta,#dialogExamen, #dialogNuevoArticulo, #divMensajeGuardado, #dialogExamenPdf
+            #dialogNuevoArticulo, #divMensajeGuardado
             { 
                 display: none;
                 font-size: 10px;
@@ -557,7 +557,7 @@
                         
                         vardialogArticulo = $("#dialogNuevoArticulo").dialog({
                             width: '100%',
-                            height: '450',
+                            height: '500',
                             title: "Registro de Articulos",
                             modal: true,
                             buttons: {

@@ -42,7 +42,7 @@ public class clsVentas {
             
             String varSql = "SELECT LPAD(v.idu_venta, 4, '0') as idu_venta, "
                     + "Date_format(v.fec_registro,'%d/%m/%Y') as fec_registro , "
-                    + "LPAD(c.idu_cliente,4,'0') as idu_cliente, c.des_nombrecompleto, v.num_total, "
+                    + "LPAD(c.idu_cliente,4,'0') as idu_cliente, c.des_nombrecompleto, FORMAT(v.num_total,2) as num_total, "
                     + "v.opc_estatus FROM ctl_ventas v "
                     + "INNER JOIN tbl_clientes c ON c.idu_cliente = v.idu_cliente AND v.opc_estatus = 2 ORDER BY idu_venta"; 
 
@@ -149,8 +149,8 @@ public class clsVentas {
             
             metEjecutarCalculosAbonosMensuales(sIduVenta);
             
-            String varSql = "SELECT idu_venta, num_plazo,  des_abono, num_importeabono, "
-                    + "num_totalapagar, num_seahorra, opc_estatus "
+            String varSql = "SELECT idu_venta, num_plazo,  des_abono, FORMAT(num_importeabono,2) as num_importeabono, "
+                    + "FORMAT(num_totalapagar,2) as num_totalapagar, FORMAT(num_seahorra,2) as num_seahorra, opc_estatus "
                     + "FROM tmp_abonosmensuales WHERE idu_venta = ?;"; 
             
             PreparedStatement varPst = varClsConexion.getConexion().prepareStatement(varSql);
@@ -193,7 +193,7 @@ public class clsVentas {
         JSONObject varJsonObjectResultado = new JSONObject();
         try {            
             
-            String varSql = "SELECT v.num_enganche, v.num_bonificacionenganche, v.num_total FROM ctl_ventas v INNER JOIN ctl_detalleventas dv ON dv.idu_venta = v.idu_venta INNER JOIN tbl_articulos a ON a.idu_articulo = dv.idu_articulo WHERE v.idu_venta = ? limit 1"; 
+            String varSql = "SELECT FORMAT(v.num_enganche,2) as num_enganche, FORMAT(v.num_bonificacionenganche,2) as num_bonificacionenganche, FORMAT(v.num_total,2) as num_total FROM ctl_ventas v INNER JOIN ctl_detalleventas dv ON dv.idu_venta = v.idu_venta INNER JOIN tbl_articulos a ON a.idu_articulo = dv.idu_articulo WHERE v.idu_venta = ? limit 1"; 
 
             PreparedStatement varPst = varClsConexion.getConexion().prepareStatement(varSql);
             varPst.setLong(1, Long.parseLong(sIduVenta));

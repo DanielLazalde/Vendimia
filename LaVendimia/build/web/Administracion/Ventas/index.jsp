@@ -56,7 +56,7 @@
                 margin: 5px;
                 width: 98%;
             }
-            #dialogNuevoArticulo, #divMensajeGuardado, #divMensajeCantidadMayorAcero, #divPreguntarSalir, #mostrarMensajeGeneral
+            #dialogNuevoArticulo, #divMensajeGuardado, #divMensajeCantidadMayorAcero, #divPreguntarSalir, #mostrarMensajeGeneral, #divPreguntarBorrar
             { 
                 display: none;
                 font-size: 10px;
@@ -234,7 +234,7 @@
 
                                                 <label for="num_enganche" class="control-label col-xs-6">Enganche:</label>
                                                 <div class="col-xs-5">
-                                                    <input id="num_enganche" name="num_enganche" type="number" disabled class="form-control" placeholder="Enganche ..." onkeyup="validacion('num_enganche');" aria-describedby="inputSuccess2Status">
+                                                    <input id="num_enganche" name="num_enganche" type="text" disabled class="form-control" placeholder="Enganche ..." onkeyup="validacion('num_enganche');" aria-describedby="inputSuccess2Status">
                                                     <span class="help-block"></span>
                                                 </div>
                                             </div>
@@ -469,6 +469,41 @@
                         
                     }
                     
+                    
+                     function cancelarArticulo(idu_detalle){ 
+                        
+                            var idu_folioventa = $('#inputidu_venta').val();
+                            //alert(idu_folioventa);
+                            $.post('../../srvVentas', {
+                                parAccion: 'delete',
+                                idu_venta: idu_folioventa,
+                                idu_detalle: idu_detalle
+                               
+                            },
+                                function(responseText) {
+                                
+                               //alert("Termino de borrar articulo");  
+                               /*var arr = [];
+                                    json = JSON.stringify(eval('(' + responseText + ')')); //convert to json string
+                                    arr = $.parseJSON(json); //convert to javascript array
+                                
+                                
+                                    var result = arr.Result;
+                                    if (result=== "OK"){*/
+                                       //  $("#error").hide();
+                                       //  $("#exito").show();
+                                       //alert("Cancelo venta satisfactoriamente");
+                                        $('#TablaDetalleVenta').jtable('load');
+                                    
+                                    //}
+                                    
+                                   
+                               
+                               
+                            });
+                        
+                    }
+                    
                    
 
                     function obtienedatosventa(){
@@ -502,7 +537,7 @@
                                     if (records.length!=0){
                                         //alert(records[0].num_tasafinanciamiento);
                                         
-                                        var num_enganche = records[0].num_enganche;
+                                        var num_enganche = records[0].num_enganche;                              
                                         var num_bonificacionenganche = records[0].num_bonificacionenganche;
                                         var num_total = records[0].num_total;
                                         
@@ -516,7 +551,7 @@
                                     else{
                                       
                                         $('#num_enganche').val("");
-                                        $('#num_enganche').val("");
+                                        $('#num_bonificacionenganche').val("");
                                         $('#num_total').val("");
                                          
                                     }
@@ -699,15 +734,15 @@
                                                         edit: true,
                                                         list: true,
                                                         inputClass: 'validate[required]'
-                                                    }/*,
-                                                    btnEditarArticulo: {
+                                                    },
+                                                    btnBorrarArticulo: {
                                                         title: '',
                                                         width: '1%',
                                                         display: function(data) {
                                                             //alert(data.record.RtdCodigo);
-                                                            return "<button type='button' title='Editar articulo' onclick='abrirDialogExamenGenerado(" + data.record.CexId + ");' style='border:none;padding:0px;'><span class='glyphicon glyphicon-eye-open'></span></button>";
+                                                            return "<button type='button' title='Borrar articulo' onclick='msgPreguntarBorrar(" + data.record.idu_detalle + ");' style='border:none;padding:0px;'><span class='glyphicon glyphicon-remove'></span></button>";
                                                         }
-                                                    }*/
+                                                    }
                                                 },
                                                 formCreated: function(event, data) {
 
@@ -790,7 +825,7 @@
                         
                         vardialogArticulo = $("#dialogNuevoArticulo").dialog({
                             width: '100%',
-                            height: 700,
+                            height: 1000,
                             title: "Registro de Ventas",
                             modal: true,
                             buttons: {
@@ -824,7 +859,7 @@
                                 var idu_folioventa = $('#inputidu_venta').val();
                                 //Prepare jTable
                                 $('#TablaAbonos').jtable({
-                                    title: 'ABONOS MENSUALES',
+                                    title: '<center>ABONOS MENSUALES</center>',
                                     //toolbarsearch: true,
                                     //pageSize: 10,
                                     //toolbarsearch:true,
@@ -840,26 +875,26 @@
                                             create: false,
                                             edit: false,
                                             list: true
-                                        },
+                                        },/*,
                                         num_importeabono: {                                           
                                             create: true,
                                             edit: true,
                                             list: true,
                                             inputClass: 'validate[required]'
-                                        },                                        
+                                        }, */                                       
                                         txttotalapagar: {
                                           
                                             width: '1%',
                                             display: function(data) {
                                                 //alert(data.record.RtdCodigo);
-                                                return "<p>TOTAL A PAGAR " + data.record.num_totalapagar+ "</p>";
+                                                return "<p>TOTAL A PAGAR $ " + data.record.num_totalapagar+ "</p>";
                                             }
                                         },
                                         txtseahorra: {                                          
                                             width: '1%',
                                             display: function(data) {
                                                 //alert(data.record.RtdCodigo);
-                                                return "<p>SE AHORRA " + data.record.num_seahorra+ "</p>";
+                                                return "<p>SE AHORRA $ " + data.record.num_seahorra+ "</p>";
                                             }
                                         },                                        
                                         radioseleccion: {                                          
@@ -1061,6 +1096,40 @@
                             });
                     }
                     
+                    function msgPreguntarBorrar(idu_detalle)
+                    {
+                         
+                        var vardialopreguntaborrar= $("#divPreguntarBorrar").dialog({
+                            width: 350,
+                            height: 200,
+                            title: "Eliminar Articulo",
+                            modal: true,
+                            buttons: {                                
+                                 "Cancelar": function() {                                     
+                                     /*$('#TablaArticulos').jtable('load');                            
+                                     $(vardialoGuardado).dialog('close');*/
+                                      $(vardialopreguntaborrar).dialog('close');
+                                    
+                                },
+                                 "Eliminar": function() {                                     
+                                     /*$('#TablaArticulos').jtable('load');                            
+                                     $(vardialoGuardado).dialog('close');
+                                      $(vardialogArticulo).dialog('close');*/
+                                     cancelarArticulo(idu_detalle);
+                                     $(vardialopreguntaborrar).dialog('close');
+                                    obtienedatosventa();
+                                     //document.location.href = './index.jsp';
+                                     //$('#TablaDetalleVenta').jtable('load');
+                                     //$(vardialogArticulo).dialog('close');
+                                      
+                                     //$(vardialopreguntasalir).dialog('close');
+                                }
+                            }
+                        
+                            });
+                    }
+                    
+                    
                     function msgCantidad()
                     {
                          
@@ -1091,13 +1160,13 @@
                             $('#des_rfc').html("RFC: " + ui.item.des_rfc);
                             $('#txt_rfc').val(ui.item.des_rfc);
                             
-                           $('#inputFiltroBusquedaArticulo').focus();
+                           //$('#inputFiltroBusquedaArticulo').focus();
                             buscocliente = true;
                             
                         }
                     });
                     
-                      $( "#inputFiltroBusquedaCliente" ).blur(function() {
+                      $( "#inputFiltroBusquedaCliente" ).focusout(function() {
                           
                           if (buscocliente != false){
                                 var nombrecompleto = $('#inputFiltroBusquedaCliente').val();
@@ -1168,7 +1237,17 @@
                                 </tr>
                         </table>
                 </div>
-                
+                 <div  id="divPreguntarBorrar">
+                        
+                        <table class="TablaMensajeGeneralLv2" align="center" border="0">
+                                <tr>
+                                        <td align="center">
+                                          ¿Esta seguro que desea borrar el articulo?
+                                         <br><br> 
+                                        </td>
+                                </tr>
+                        </table>
+                </div>
                  <div  id="mostrarMensajeGeneral">
                         
                         <table class="TablaMensajeGeneralLv2" align="center" border="0">
